@@ -8,8 +8,10 @@
     """,
     'author': 'Ricardo Marin',
     'version': '0.1',
-    'license': 'GPL 2',
+    'license': 'GPL-2',
     'data': [],
-    'demo': [],
+    'demo': [
+        'demo/example_demo.xml'
+    ],
     'depends': []
 }

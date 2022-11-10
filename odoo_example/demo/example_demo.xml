@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        
+        <record model="example.crewmates" id="CR_001">
+            <field name="full_name">Chucho Emiliana</field>
+            <field name="height_meters">1.61</field>
+            <field name="weight_kg">51</field>
+            <field name="IQ">187</field>
+            <field name="role">Biologist</field>
+            <field name="nationality">arg</field>
+            <field name="is_new">True</field>
+        </record>
+        
+        <record model="example.crewmates" id="CR_002">
+            <field name="full_name">Celio Cayetano</field>
+            <field name="height_meters">1.86</field>
+            <field name="weight_kg">71</field>
+            <field name="IQ">175</field>
+            <field name="role">Engineer</field>
+            <field name="nationality">esp</field>
+            <field name="is_new">False</field>
+        </record>
+        
+        <record model="example.crewmates" id="CR_003">
+            <field name="full_name">Luther Rube</field>
+            <field name="height_meters">1.80</field>
+            <field name="weight_kg">75</field>
+            <field name="IQ">190</field>
+            <field name="role">Captain</field>
+            <field name="nationality">usa</field>
+            <field name="is_new">False</field>
+        </record>
+        
+    </data>
+</odoo>
