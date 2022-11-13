@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        
+        <record model="ir.ui.view" id="crewmates_view_form">
+            
+            <field name="name">example.crewmates.form</field>
+            <field name="model">example.crewmates</field>
+            <field name="arch" type="xml">
+                
+                <form string="Crewmate Form.">
+                    
+                    <sheet>
+                        <h1><field name="full_name"/></h1>
+                        <h2><field name="role"/></h2>
+                        
+                        <group string="Political Properties">
+                            <field name="nationality"/>
+                            <field name="agency"/>
+                            <field name="join_date"/>
+                        </group>
+                        
+                        <group string="Physical Properties.">
+                            <field name="birth_date"/>
+                            <field name="height_meters"/>
+                            <field name="weight_kg"/>
+                            <field name="IQ"/>
+                        </group>
+                        
+                    </sheet>
+                    
+                </form>
+                
+            </field>
+            
+        </record>
+        
+        <record model="ir.ui.view" id="crewmates_view_list">
+            
+            <field name="name">example.crewmates.list</field>
+            <field name="model">example.crewmates</field>
+            <field name="arch" type="xml">
+                
+                <tree string="Crewmates List.">
+                    <field name="full_name"/>
+                    <field name="role"/>
+                    <field name="nationality"/>
+                    <field name="birth_date"/>
+                </tree>
+                
+            </field>
+                
+        </record>
+        
+        <record model="ir.ui.view" id="crewmates_view_search">
+            
+            <field name="name">example.crewmates.search</field>
+            <field name="model">example.crewmates</field>
+            <field name="arch" type="xml">
+                
+                <search>
+                    <field name="full_name"/>
+                    <field name="role"/>
+                    <field name="nationality"/>
+                </search>
+                
+            </field>
+            
+        </record>
+        
+    </data>
+</odoo>

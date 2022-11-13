@@ -9,7 +9,12 @@
     'author': 'Ricardo Marin',
     'version': '0.1',
     'license': 'GPL-2',
-    'data': [],
+    'data': [
+        'security/example_groups.xml',
+        'security/ir.model.access.csv',
+        'views/example_menuitems.xml',
+        'views/crewmate_views.xml'
+    ],
     'demo': [
         'demo/example_demo.xml'
     ],
