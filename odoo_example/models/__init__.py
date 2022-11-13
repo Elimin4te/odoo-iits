@@ -1,3 +1,3 @@
 # -*- coding: utf-8 -*-
 
-from . import crewmates
+from . import crewmates, missions

@@ -51,20 +51,11 @@ class Crewmates(models.Model):
         copy=False
     )
     
-    is_new = fields.Boolean(
-        string='New', 
-        help="Whether the Crewmate recently joined or not. Default is False.",
-        default=False,
-        copy=False
-    )
-    
     completed_missions = fields.Integer(
         string='Completed Missions', 
         help="Crewmate's amount of completed missions. Default is 0.",
         default=0
     )
-    
-    # current_mission = fields.many2one('example.missions', 'Missions')
     
     role = fields.Char(
         required=True, 

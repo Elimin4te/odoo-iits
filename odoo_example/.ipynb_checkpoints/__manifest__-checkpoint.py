@@ -13,10 +13,11 @@
         'security/example_groups.xml',
         'security/ir.model.access.csv',
         'views/example_menuitems.xml',
-        'views/crewmate_views.xml'
+        'views/crewmate_views.xml',
+        'views/mission_views.xml'
     ],
     'demo': [
         'demo/example_demo.xml'
     ],
-    'depends': []
+    'depends': ['base']
 }

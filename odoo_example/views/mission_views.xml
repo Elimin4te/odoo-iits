@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        
+        <record model="ir.ui.view" id="missions_view_form">
+            
+            <field name="name">example.missions.form</field>
+            <field name="model">example.missions</field>
+            <field name="arch" type="xml">
+                
+                <form string="Missions Form.">
+                    
+                    <sheet>
+                        <h1><field name="name"/></h1>
+                        <h2><field name="goal"/></h2>
+                        
+                        <group string="Mission Details">
+                            <field name="description"/>
+                            <field name="required_personal"/>
+                            <field name="start_date"/>
+                            <field name="end_date"/>
+                        </group>
+                        
+                    </sheet>
+                    
+                </form>
+                
+            </field>
+            
+        </record>
+        
+        <record model="ir.ui.view" id="crewmates_view_list">
+            
+            <field name="name">example.missions.list</field>
+            <field name="model">example.missions</field>
+            <field name="arch" type="xml">
+                
+                <tree string="Crewmates List.">
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="start_date"/>
+                </tree>
+                
+            </field>
+                
+        </record>
+        
+        <record model="ir.ui.view" id="crewmates_view_search">
+            
+            <field name="name">example.missions.search</field>
+            <field name="model">example.missions</field>
+            <field name="arch" type="xml">
+                
+                <search>
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                </search>
+                
+            </field>
+            
+        </record>
+        
+    </data>
+</odoo>
