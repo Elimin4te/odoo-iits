@@ -19,5 +19,5 @@
     'demo': [
         'demo/example_demo.xml'
     ],
-    'depends': ['base']
+    'depends': []
 }
