@@ -57,7 +57,7 @@ class Missions(models.Model):
              
             if len(record.goal.replace(' ','')) < 20:
                 raise ValidationError(
-                    f"Too short! Description Field lenght should be 30 letters at least (not inluding spaces), but you entered {len(record.goal.replace(' ',''))}."
+                    f"Too short! Goal Field lenght should be 30 letters at least (not inluding spaces), but you entered {len(record.goal.replace(' ',''))}."
                 )
                 
     @api.constrains('end_date')

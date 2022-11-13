@@ -4,7 +4,7 @@ from odoo import models, api, fields
 from odoo.exceptions import ValidationError
 from datetime import datetime as d
 
-vald_date = d(2001, 11, 13)
+vald_date = d(2001, 11, 13).date()
 
 nationality_selection = [
     ('ve', 'Venezuela'),
@@ -108,12 +108,12 @@ class Crewmates(models.Model):
     def _check_dates(self):
         
         for record in self:
-            if (record.birth_date) > vald_epoch:
+            if (record.birth_date) > vald_date:
                 raise ValidationError(
                     f"Sorry, minimal age to join the Crewmates is 21."
                 )
             else:
-                if (record.birth_date) <= (record.join_date):
+                if (record.birth_date) >= (record.join_date):
                     raise ValidationError(
                         f"Whoops! might've been a typo, but you specified a lower Join Date than Birth Date, try again."
                     )
