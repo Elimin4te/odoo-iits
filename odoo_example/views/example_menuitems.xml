@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="example_list_crewmates_action">
+            <field name="name">Crewmates</field>
+            <field name="res_model">example.crewmates</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type='html'>
+                <p class="o_view_nocontent_smiley_face">
+                    Register the crewmates that will be elegible for missions here!
+                </p>
+            </field>
+        </record>
+        
+        <menuitem name="SpaceMission" id="space_mission" sequence='1'/>
+        <menuitem name="SpaceMission" id="space_mission_sub" parent="space_mission" sequence='2'/>
+        <menuitem name="Crewmates" id="space_mission_crewmates" parent="space_mission_sub" sequence='3' action="example_list_crewmates_action"/>
+        
+    </data>
+</odoo>
