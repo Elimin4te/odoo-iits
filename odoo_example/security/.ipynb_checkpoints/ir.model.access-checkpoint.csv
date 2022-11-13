@@ -1,6 +1,9 @@
 id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
 example_admin,Example Admin,model_example_crewmates,group_example_admin,1,1,1,1
 example_read_all_crewmates,Read All,model_example_crewmates,,1,0,0,0
-example_read_all_missions,Read All,model_example_missions,,1,0,0,0
 example_analist,Example Analist,model_example_crewmates,group_example_analist,1,1,0,0
 example_manager,Example Manager,model_example_crewmates,group_example_manager,1,1,1,0
+example_admin,Example Admin,model_example_missions,group_missions_admin,1,1,1,1
+example_read_all_crewmates,Read All,model_example_crewmates,,1,0,0,0
+example_analist,Example Analist,model_example_missions,group_missions_analist,1,1,0,0
+example_manager,Example Manager,model_example_missions,group_missions_manager,1,1,1,0

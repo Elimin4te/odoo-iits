@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, api, fields
+from odoo.exceptions import ValidationError
+from datetime import datetime as d
+
+vald_date = d(2001, 11, 13)
 
 nationality_selection = [
     ('ve', 'Venezuela'),
@@ -15,6 +19,8 @@ agency_selection = [
     ('fbi', 'FBI'),
     ('nasa', 'NASA'),
 ]
+
+
 
 class Crewmates(models.Model):
     
@@ -80,3 +86,34 @@ class Crewmates(models.Model):
         string='IQ', 
         help="Crewmate's Intellectual Coeficient."
     )
+    
+    @api.constrains('IQ', 'weight_kg', 'height_meters')
+    def _check_physical(self):
+        
+        for record in self:
+            if record.IQ < 160:
+                raise ValidationError(
+                    f"Sorry, only prospects with 160+ IQ can join the Crewmates! your's is {record.IQ}."
+                )
+            if record.weight_kg > 90:
+                raise ValidationError(
+                    f"Sorry, you seem a little too thick to join the Crewmates."
+                )
+            if record.height_meters < 1.60:
+                raise ValidationError(
+                    f"Sorry, only prospects higher than 1.60m can join the Crewmates! your's is {record.height_meters}m."
+                )
+    
+    @api.constrains('birth_date', 'join_date')
+    def _check_dates(self):
+        
+        for record in self:
+            if (record.birth_date) > vald_epoch:
+                raise ValidationError(
+                    f"Sorry, minimal age to join the Crewmates is 21."
+                )
+            else:
+                if (record.birth_date) <= (record.join_date):
+                    raise ValidationError(
+                        f"Whoops! might've been a typo, but you specified a lower Join Date than Birth Date, try again."
+                    )

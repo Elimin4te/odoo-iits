@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        
+        <record model="example.crewmates" id="CR_001">
+            <field name="full_name">Chucho Emiliana</field>
+            <field name="height_meters">1.61</field>
+            <field name="weight_kg">51</field>
+            <field name="IQ">187</field>
+            <field name="role">Biologist</field>
+            <field name="nationality">arg</field>
+        </record>
+        
+        <record model="example.crewmates" id="CR_002">
+            <field name="full_name">Celio Cayetano</field>
+            <field name="height_meters">1.86</field>
+            <field name="weight_kg">71</field>
+            <field name="IQ">175</field>
+            <field name="role">Engineer</field>
+            <field name="nationality">esp</field>
+        </record>
+        
+        <record model="example.crewmates" id="CR_003">
+            <field name="full_name">Luther Rube</field>
+            <field name="height_meters">1.80</field>
+            <field name="weight_kg">75</field>
+            <field name="IQ">190</field>
+            <field name="role">Captain</field>
+            <field name="nationality">usa</field>
+        </record>
+        
+        <record model="example.crewmates" id="CR_004">
+            <field name="full_name">Ricardo Marin</field>
+            <field name="height_meters">1.80</field>
+            <field name="weight_kg">77</field>
+            <field name="IQ">171</field>
+            <field name="role">IT Engineer</field>
+            <field name="nationality">ve</field>
+        </record>
+        
+        <record model="example.missions" id="MS_001">
+            <field name="name">TerraForMars</field>
+            <field name="description">
+                This mission will try to stablish a human colony in mars, this colony will try to be as earth-like as possible. 
+            </field>
+            <field name="goal">
+                The mission ultimate goal is achieving an earth-like comfortable colony in Mars.
+            </field>
+            <field name="start_date">2023-01-20</field>
+            <field name="end_date">2033-01-20</field>
+            <field name="required_personal">4</field>
+        </record>
+        
+        <record model="example.missions" id="MS_002">
+            <field name="name">Finding Life in our Galaxy</field>
+            <field name="description">
+                This mission will try to find any kind of life-form in our milky way galaxy. 
+            </field>
+            <field name="goal">
+                The mission main goal is to find any kind of life-form and study it to try to comprehend it.
+            </field>
+            <field name="start_date">2024-03-10</field>
+            <field name="end_date">2039-03-10</field>
+            <field name="required_personal">11</field>
+        </record>
+        
+    </data>
+</odoo>

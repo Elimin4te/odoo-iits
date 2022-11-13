@@ -29,13 +29,13 @@
             
         </record>
         
-        <record model="ir.ui.view" id="crewmates_view_list">
+        <record model="ir.ui.view" id="missions_view_list">
             
             <field name="name">example.missions.list</field>
             <field name="model">example.missions</field>
             <field name="arch" type="xml">
                 
-                <tree string="Crewmates List.">
+                <tree string="Missions List.">
                     <field name="name"/>
                     <field name="description"/>
                     <field name="start_date"/>
@@ -45,7 +45,7 @@
                 
         </record>
         
-        <record model="ir.ui.view" id="crewmates_view_search">
+        <record model="ir.ui.view" id="missions_view_search">
             
             <field name="name">example.missions.search</field>
             <field name="model">example.missions</field>
