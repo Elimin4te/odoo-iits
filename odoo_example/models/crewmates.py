@@ -20,8 +20,6 @@ agency_selection = [
     ('nasa', 'NASA'),
 ]
 
-
-
 class Crewmates(models.Model):
     
     _name = 'example.crewmates'
@@ -55,6 +53,16 @@ class Crewmates(models.Model):
         help="Crewmate's Agency.",
         selection=agency_selection,
         copy=False
+    )
+    
+    current_mission = fields.Many2one(
+        comodel_name = 'example.missions',
+        string = "Current Mission",
+        help = "The current mission the Crewmate is assigned to.",
+        ondelete="set null",
+        required = False,
+        store=True,
+        default=None
     )
     
     completed_missions = fields.Integer(

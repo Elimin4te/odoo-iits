@@ -7,7 +7,7 @@
         This is an example Odoo module that will be used throughtout the course.
     """,
     'author': 'Ricardo Marin',
-    'version': '0.11',
+    'version': '0.1.2',
     'license': 'GPL-2',
     'data': [
         'security/example_groups.xml',

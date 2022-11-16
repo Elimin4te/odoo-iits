@@ -46,6 +46,31 @@ class Missions(models.Model):
         default=3
     )
     
+    mission_crewmates = fields.One2many(
+        required=False,
+        string='Crewmates',
+        help='Crewmates assigned to this mission.',
+        default=None,
+        comodel_name='example.crewmates',
+        inverse_name='current_mission'
+    )
+    
+    assigned_spaceship = fields.Many2one(
+        'res.partner',
+        required=False,
+        string='Spaceship',
+        help='The assigned spaceship for this mission.',
+        default=None,
+    )
+    
+    sponsors = fields.Many2many(
+        'res.partner',
+        required=False,
+        string='Sponsors',
+        help='Mission commercial sponsors.',
+        default=None
+    )
+    
     @api.constrains('goal', 'description')
     def _check_lenght(self):
         

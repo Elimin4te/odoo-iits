@@ -13,10 +13,13 @@
                     <sheet>
                         <h1><field name="name"/></h1>
                         <h2><field name="goal"/></h2>
+                        <h2><field name="assigned_spaceship"/></h2>
                         
                         <group string="Mission Details">
                             <field name="description"/>
                             <field name="required_personal"/>
+                            <field name="mission_crewmates"/>
+                            <field name="sponsors"/>
                             <field name="start_date"/>
                             <field name="end_date"/>
                         </group>
@@ -38,6 +41,7 @@
                 <tree string="Missions List.">
                     <field name="name"/>
                     <field name="description"/>
+                    <field name="assigned_spaceship"/>
                     <field name="start_date"/>
                 </tree>
                 

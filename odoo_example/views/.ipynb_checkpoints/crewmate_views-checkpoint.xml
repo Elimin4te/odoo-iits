@@ -12,6 +12,7 @@
                     
                     <sheet>
                         <h1><field name="full_name"/></h1>
+                        <h2><field name="current_mission" force_save="1"/></h2>
                         <h2><field name="role"/></h2>
                         
                         <group string="Political Properties">
@@ -43,8 +44,8 @@
                 
                 <tree string="Crewmates List.">
                     <field name="full_name"/>
+                    <field name="current_mission"/>
                     <field name="role"/>
-                    <field name="nationality"/>
                     <field name="birth_date"/>
                 </tree>
                 
@@ -62,6 +63,7 @@
                     <field name="full_name"/>
                     <field name="role"/>
                     <field name="nationality"/>
+                    <field name="current_mission"/>
                 </search>
                 
             </field>
