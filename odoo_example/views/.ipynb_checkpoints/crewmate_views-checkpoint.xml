@@ -11,9 +11,12 @@
                 <form string="Crewmate Form.">
                     
                     <sheet>
+                        
                         <h1><field name="full_name"/></h1>
-                        <h2><field name="current_mission" force_save="1"/></h2>
-                        <h2><field name="role"/></h2>
+                        <group> 
+                            <h2><field name="current_mission" force_save="1"/></h2>
+                            <h2><field name="role"/></h2>
+                        </group>
                         
                         <group string="Political Properties">
                             <field name="nationality"/>
