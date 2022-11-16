@@ -14,26 +14,24 @@
                         <h1><field name="name"/></h1>
                         <group>
                             <field name="goal"/>
-                            <field name="assigned_spaceship" force_save="1"/>
                         </group>
                         
                         <group string="Mission Details">
                             <field name="description"/>
+                            <field name="assigned_spaceship" force_save="1"/>
                             <field name="required_personal"/>
                             <field name="start_date"/>
                             <field name="end_date"/>
                         </group>
                         
-                        <group>
-                            <notebook>
-                                <page string="Crewmates">
-                                    <field name="mission_crewmates" force_save="1"/>
-                                </page>
-                                <page string="Sponsors" force_save="1">
-                                    <field name="sponsors"/>
-                                </page>
-                            </notebook>
-                        </group>
+                        <notebook>
+                            <page string="Crewmates">
+                                <field name="mission_crewmates" force_save="1"/>
+                            </page>
+                            <page string="Sponsors" force_save="1">
+                                <field name="sponsors"/>
+                            </page>
+                        </notebook>
                         
                     </sheet>
                     

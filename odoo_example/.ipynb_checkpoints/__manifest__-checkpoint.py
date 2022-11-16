@@ -9,6 +9,7 @@
     'author': 'Ricardo Marin',
     'version': '0.1.2',
     'license': 'GPL-2',
+    'category': 'Training',
     'data': [
         'security/example_groups.xml',
         'security/ir.model.access.csv',
