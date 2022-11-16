@@ -52,7 +52,8 @@ class Missions(models.Model):
         help='Crewmates assigned to this mission.',
         default=None,
         comodel_name='example.crewmates',
-        inverse_name='current_mission'
+        inverse_name='current_mission',
+        store=True
     )
     
     assigned_spaceship = fields.Many2one(
@@ -61,6 +62,7 @@ class Missions(models.Model):
         string='Spaceship',
         help='The assigned spaceship for this mission.',
         default=None,
+        store=True
     )
     
     sponsors = fields.Many2many(
@@ -68,7 +70,8 @@ class Missions(models.Model):
         required=False,
         string='Sponsors',
         help='Mission commercial sponsors.',
-        default=None
+        default=None,
+        store=True
     )
     
     @api.constrains('goal', 'description')
