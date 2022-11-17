@@ -7,6 +7,8 @@
             <field name="height_meters">1.61</field>
             <field name="weight_kg">51</field>
             <field name="IQ">187</field>
+            <field name="birth_date">2000-05-07</field>
+            <field name="join_date">2020-05-07</field>
             <field name="role">Biologist</field>
             <field name="nationality">arg</field>
         </record>
@@ -16,6 +18,8 @@
             <field name="height_meters">1.86</field>
             <field name="weight_kg">71</field>
             <field name="IQ">175</field>
+            <field name="birth_date">1988-06-10</field>
+            <field name="join_date">2016-05-07</field>
             <field name="role">Engineer</field>
             <field name="nationality">esp</field>
         </record>
@@ -25,6 +29,8 @@
             <field name="height_meters">1.80</field>
             <field name="weight_kg">75</field>
             <field name="IQ">190</field>
+            <field name="birth_date">1997-09-14</field>
+            <field name="join_date">2019-08-17</field>
             <field name="role">Captain</field>
             <field name="nationality">usa</field>
         </record>
@@ -34,18 +40,16 @@
             <field name="height_meters">1.80</field>
             <field name="weight_kg">77</field>
             <field name="IQ">171</field>
+            <field name="birth_date">2001-08-23</field>
+            <field name="join_date">2022-08-06</field>
             <field name="role">IT Engineer</field>
             <field name="nationality">ve</field>
         </record>
-        
+    
         <record model="example.missions" id="MS_001">
             <field name="name">TerraForMars</field>
-            <field name="description">
-                This mission will try to stablish a human colony in mars, this colony will try to be as earth-like as possible. 
-            </field>
-            <field name="goal">
-                The mission ultimate goal is achieving an earth-like comfortable colony in Mars.
-            </field>
+            <field name="description">This mission will try to stablish a human colony in mars, this colony will try to be as earth-like as possible.</field>
+            <field name="goal">The mission ultimate goal is achieving an earth-like comfortable colony in Mars.</field>
             <field name="start_date">2023-01-20</field>
             <field name="end_date">2033-01-20</field>
             <field name="required_personal">4</field>
@@ -53,12 +57,8 @@
         
         <record model="example.missions" id="MS_002">
             <field name="name">Finding Life in our Galaxy</field>
-            <field name="description">
-                This mission will try to find any kind of life-form in our milky way galaxy. 
-            </field>
-            <field name="goal">
-                The mission main goal is to find any kind of life-form and study it to try to comprehend it.
-            </field>
+            <field name="description">This mission will try to find any kind of life-form in our milky way galaxy.</field>
+            <field name="goal">The mission main goal is to find any kind of life-form and study it to try to comprehend it.</field>
             <field name="start_date">2024-03-10</field>
             <field name="end_date">2039-03-10</field>
             <field name="required_personal">11</field>

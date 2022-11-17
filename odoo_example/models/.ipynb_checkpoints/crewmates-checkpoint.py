@@ -4,7 +4,7 @@ from odoo import models, api, fields
 from odoo.exceptions import ValidationError
 from datetime import datetime as d
 
-vald_date = d(2001, 11, 13).date()
+min_age = 21
 
 nationality_selection = [
     ('ve', 'Venezuela'),
@@ -33,13 +33,31 @@ class Crewmates(models.Model):
     )
     
     birth_date = fields.Date(
+        required=True,
         string='Birth Date', 
-        help="Crewmate's Birth Date."
+        help="Crewmate's Birth Date.",
+        default="2000-10-10"
+    )
+    
+    age = fields.Integer(
+        string='Age', 
+        help="Crewmate's age.",
+        compute='set_age',
+        store=True
     )
     
     join_date = fields.Date(
+        required=True,
         string='Join Date', 
-        help="The date Crewmate joined the org."
+        help="The date Crewmate joined the org.",
+        default="2020-10-10"
+    )
+    
+    service_years = fields.Integer(
+        string='Service Years', 
+        help="Years since the crewmate joined.",
+        compute='set_service_years',
+        store=True
     )
     
     nationality = fields.Selection(
@@ -112,16 +130,39 @@ class Crewmates(models.Model):
                     f"Sorry, only prospects higher than 1.60m can join the Crewmates! your's is {record.height_meters}m."
                 )
     
-    @api.constrains('birth_date', 'join_date')
+    @api.depends('birth_date')
+    def set_age(self):
+        
+        for record in self:
+            _cyear = int(d.now().date().year)
+            _byear = int(record.birth_date.year)
+            record.age = _cyear - _byear
+            
+    @api.constrains('age')
+    def _check_age(self):
+        
+        for record in self:
+            if record.age < min_age:
+                raise ValidationError(
+                        f"Sorry! the minimum age to join Crewmates is 21."
+                )
+            
+    @api.depends('join_date')       
+    def set_service_years(self):
+        
+        for record in self:
+            _cyear = int(d.now().date().year)
+            _jyear = int(record.join_date.year)
+            record.service_years = _cyear - _jyear
+    
+    @api.constrains('join_date')
     def _check_dates(self):
         
         for record in self:
-            if (record.birth_date) > vald_date:
+            if (record.birth_date) >= (record.join_date):
                 raise ValidationError(
-                    f"Sorry, minimal age to join the Crewmates is 21."
-                )
-            else:
-                if (record.birth_date) >= (record.join_date):
-                    raise ValidationError(
                         f"Whoops! might've been a typo, but you specified a lower Join Date than Birth Date, try again."
                     )
+                    
+   
+            

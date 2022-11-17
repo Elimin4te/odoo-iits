@@ -22,6 +22,7 @@
                             <field name="required_personal"/>
                             <field name="start_date"/>
                             <field name="end_date"/>
+                            <field name="duration_years"/>
                         </group>
                         
                         <notebook>
@@ -35,7 +36,7 @@
                         
                     </sheet>
                     
-                </form>
+                </form> 
                 
             </field>
             
@@ -51,7 +52,7 @@
                     <field name="name"/>
                     <field name="description"/>
                     <field name="assigned_spaceship"/>
-                    <field name="start_date"/>
+                    <field name="duration_years"/>
                 </tree>
                 
             </field>
@@ -70,6 +71,10 @@
                     <field name="start_date"/>
                     <field name="end_date"/>
                 </search>
+                
+                <searchpanel>
+                    <field name="assigned_spaceship"/>
+                </searchpanel>
                 
             </field>
             

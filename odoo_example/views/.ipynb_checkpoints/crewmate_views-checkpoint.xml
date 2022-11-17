@@ -22,10 +22,12 @@
                             <field name="nationality"/>
                             <field name="agency"/>
                             <field name="join_date"/>
+                            <field name="service_years"/>
                         </group>
                         
                         <group string="Physical Properties.">
                             <field name="birth_date"/>
+                            <field name="age"/>
                             <field name="height_meters"/>
                             <field name="weight_kg"/>
                             <field name="IQ"/>
@@ -49,7 +51,7 @@
                     <field name="full_name"/>
                     <field name="current_mission"/>
                     <field name="role"/>
-                    <field name="birth_date"/>
+                    <field name="age"/>
                 </tree>
                 
             </field>
@@ -68,6 +70,10 @@
                     <field name="nationality"/>
                     <field name="current_mission"/>
                 </search>
+                
+                <searchpanel>
+                    <field name="current_mission"/>
+                </searchpanel>
                 
             </field>
             

@@ -39,6 +39,14 @@ class Missions(models.Model):
         help='Appr. Date this mission will end.'
     )
     
+    duration_years = fields.Integer(
+        required=False,
+        string='Approx. Duration',
+        help='Appr. duration in years for the mission.',
+        store=True,
+        compute='set_duration'
+    )
+    
     required_personal = fields.Integer(
         required=True,
         string='Minimum Crewmates',
@@ -96,3 +104,12 @@ class Missions(models.Model):
                 raise ValidationError(
                     f"Watch out! End Date field can't be lower or equal to Start Date."
                 )
+                
+    @api.depends('start_date', 'end_date')
+    def set_duration(self):
+        
+        for record in self:
+            _syear = int(record.start_date.year)
+            _fyear = int(record.end_date.year)
+            record.duration_years = _fyear - _syear
+    
