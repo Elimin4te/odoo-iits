@@ -16,8 +16,6 @@
                         <group string="Share Details">
                             <group>
                                 <field name="investors"/>
-                            </group>
-                            <group>
                                 <field name="qty"/>
                                 <field name="reserved_shares"/>
                                 <field name="total_reservation"/>
