@@ -37,9 +37,8 @@
         <menuitem name="SpaceMission" id="space_mission_main" sequence='1'/>
         <menuitem name="SpaceMission" id="space_mission_main_sub" sequence='2'/>
         
-        <menuitem name="Missions" id="space_mission_missions" parent="space_mission_main_sub" sequence='3'/>
-        <menuitem name="List" id="space_mission_missions_list" parent="space_mission_main_sub" sequence='4' action="example_list_missions_action"/>
-        <menuitem name="Shares" id="space_mission_missions_shares" parent="space_mission_main_sub" sequence='5' action="example_list_shares_action"/>
+        <menuitem name="Missions List" id="space_mission_missions_list" parent="space_mission_main_sub" sequence='4' action="example_list_missions_action"/>
+        <menuitem name="Mission Shares" id="space_mission_missions_shares" parent="space_mission_main_sub" sequence='5' action="example_list_shares_action"/>
         
         <menuitem name="Crewmates" id="space_mission_crewmates" parent="space_mission_main_sub" sequence='6' action="example_list_crewmates_action"/>
         
