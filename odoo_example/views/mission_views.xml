@@ -70,12 +70,11 @@
                     <field name="description"/>
                     <field name="start_date"/>
                     <field name="end_date"/>
+                    <searchpanel>
+                        <field name="assigned_spaceship"/>
+                    </searchpanel>
                 </search>
-                
-                <searchpanel>
-                    <field name="assigned_spaceship"/>
-                </searchpanel>
-                
+            
             </field>
             
         </record>

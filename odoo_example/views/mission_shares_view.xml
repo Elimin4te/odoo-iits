@@ -60,12 +60,12 @@
                 
                     <search>
                         <field name="mission_id"/>
+                        
+                        <searchpanel>
+                            <field name="investors"/>
+                        </searchpanel>    
                     </search>
-
-                    <searchpanel>
-                        <field name="investors"/>
-                    </searchpanel>
-                
+    
             </field>
             
         </record>

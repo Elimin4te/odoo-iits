@@ -69,11 +69,12 @@
                     <field name="role"/>
                     <field name="nationality"/>
                     <field name="current_mission"/>
+                    
+                    <searchpanel>
+                        <field name="current_mission"/>
+                    </searchpanel>
+                    
                 </search>
-                
-                <searchpanel>
-                    <field name="current_mission"/>
-                </searchpanel>
                 
             </field>
             
