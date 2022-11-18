@@ -15,7 +15,8 @@
         'security/ir.model.access.csv',
         'views/example_menuitems.xml',
         'views/crewmate_views.xml',
-        'views/mission_views.xml'
+        'views/mission_views.xml',
+        'views/mission_shares_view.xml'
     ],
     'demo': [
         'demo/example_demo.xml'

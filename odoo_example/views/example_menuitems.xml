@@ -13,7 +13,7 @@
         </record>
         
          <record model="ir.actions.act_window" id="example_list_missions_action">
-            <field name="name">Missions</field>
+            <field name="name">List</field>
             <field name="res_model">example.missions</field>
             <field name="view_mode">tree,form</field>
             <field name="help" type='html'>
@@ -23,10 +23,25 @@
             </field>
         </record>
         
+        <record model="ir.actions.act_window" id="example_list_shares_action">
+            <field name="name">Shares</field>
+            <field name="res_model">mission.shares</field>
+            <field name="view_mode">tree,form,pivot</field>
+            <field name="help" type='html'>
+                <p class="o_view_nocontent_smiley_face">
+                    Create the Mission Shares here!
+                </p>
+            </field>
+        </record>
+        
         <menuitem name="SpaceMission" id="space_mission_main" sequence='1'/>
         <menuitem name="SpaceMission" id="space_mission_main_sub" sequence='2'/>
-        <menuitem name="Missions" id="space_mission_missions" parent="space_mission_main_sub" sequence='3' action="example_list_missions_action"/>
-        <menuitem name="Crewmates" id="space_mission_crewmates" parent="space_mission_main_sub" sequence='4' action="example_list_crewmates_action"/>
+        
+        <menuitem name="Missions" id="space_mission_missions" parent="space_mission_main_sub" sequence='3'/>
+        <menuitem name="List" id="space_mission_missions_list" parent="space_mission_main_sub" sequence='4' action="example_list_missions_action"/>
+        <menuitem name="Shares" id="space_mission_missions_shares" parent="space_mission_main_sub" sequence='5' action="example_list_shares_action"/>
+        
+        <menuitem name="Crewmates" id="space_mission_crewmates" parent="space_mission_main_sub" sequence='6' action="example_list_crewmates_action"/>
         
     </data>
 </odoo>

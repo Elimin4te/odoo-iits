@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        
+        <record model="ir.ui.view" id="shares_view_form">
+            
+            <field name="name">mission.shares.form</field>
+            <field name="model">mission.shares</field>
+            <field name="arch" type="xml">
+                
+                <form string="Missions Shares Form.">
+                    
+                    <sheet>
+                        <h1><field name="mission_id"/></h1>
+
+                        <group string="Share Details">
+                            <group>
+                                <field name="investors"/>
+                            </group>
+                            <group>
+                                <field name="qty"/>
+                                <field name="reserved_shares"/>
+                                <field name="total_reservation"/>
+                            </group>
+                            <group>
+                                <field name="bprice"/>
+                                <field name="tax"/>
+                                <field name="fprice"/>
+                            </group>
+                        </group>
+                        
+                    </sheet>
+                    
+                </form> 
+                
+            </field>
+            
+        </record>
+        
+        <record model="ir.ui.view" id="shares_view_list">
+            
+            <field name="name">mission.shares.list</field>
+            <field name="model">mission.shares</field>
+            <field name="arch" type="xml">
+                
+                <tree string="Shares List.">
+                    <field name="mission_id"/>
+                    <field name="qty"/>
+                    <field name="fprice"/>
+                    <field name="reserved_shares"/>
+                </tree>
+                
+            </field>
+                
+        </record>
+        
+        <record model="ir.ui.view" id="shares_view_search">
+            
+            <field name="name">mission.shares.search</field>
+            <field name="model">mission.shares</field>
+            <field name="arch" type="xml">
+                
+                    <search>
+                        <field name="mission_id"/>
+                    </search>
+
+                    <searchpanel>
+                        <field name="investors"/>
+                    </searchpanel>
+                
+            </field>
+            
+        </record>
+        
+        <record model="ir.ui.view" id="shares_view_pivot">
+            
+            <field name="name">mission.shares.pivot</field>
+            <field name="model">mission.shares</field>
+            <field name="arch" type="xml">
+                
+                <pivot string="Pivot View">
+                    <field name="investors" type="row"/>
+                    <field name="reserved_shares" type="measure"/>
+                    <field name="bprice" type="column"/>
+                    <field name="bprice" type="column"/>
+                    <field name="tax" type="column"/>
+                    <field name="qty" type="column"/>  
+                </pivot>
+                
+            </field>
+        </record>
+                
+    </data>
+</odoo>
