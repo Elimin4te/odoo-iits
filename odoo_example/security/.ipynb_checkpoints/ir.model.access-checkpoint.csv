@@ -7,3 +7,7 @@ example_admin_missions,Missions Admin,model_example_missions,group_missions_admi
 example_read_all_missions,Read All,model_example_missions,,1,0,0,0
 example_analist_missions,Missions Analist,model_example_missions,group_missions_analist,1,1,0,0
 example_manager_missions,Missions Manager,model_example_missions,group_missions_manager,1,1,1,0
+example_admin_shares,Shares Admin,model_mission_shares,group_missions_admin,1,1,1,1
+example_read_all_shares,Read All,model_mission_shares,,1,0,0,0
+example_analist_shares,Shares Analist,model_mission_shares,group_missions_analist,1,1,0,0
+example_manager_shares,Shares Manager,model_mission_shares,group_missions_manager,1,1,1,0

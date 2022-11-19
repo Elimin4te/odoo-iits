@@ -21,6 +21,16 @@
         <field name="name">Missions / Manager</field>
     </record>
     
+    <record id="group_shares_admin" model="res.groups">
+        <field name="name">Shares / Admin</field>
+    </record>
+    <record id="group_shares_analist" model="res.groups">
+        <field name="name">Shares / Analist</field>
+    </record>
+    <record id="group_shares_manager" model="res.groups">
+        <field name="name">Shares / Manager</field>
+    </record>
+    
     <record id="minimal_height_for_men" model="ir.rule">
         <field name="name">Minimal Height for Men to be accepted in the Mission</field>
         <field name="perm_read" eval="1"/>
