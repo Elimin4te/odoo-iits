@@ -16,10 +16,14 @@
         'views/example_menuitems.xml',
         'views/crewmate_views.xml',
         'views/mission_views.xml',
-        'views/mission_shares_view.xml'
+        'views/mission_shares_view.xml',
+        'views/mission_share_sale_inherit.xml'
     ],
     'demo': [
         'demo/example_demo.xml'
     ],
-    'depends': ['base']
+    'depends': [
+        'base',
+        'sale_management'
+    ]
 }

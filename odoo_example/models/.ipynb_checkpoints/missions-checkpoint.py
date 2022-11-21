@@ -28,15 +28,17 @@ class Missions(models.Model):
     )
     
     start_date = fields.Date(
-        required=True,
         string='Starting Date',
-        help='Appr. Date this mission will start.'
+        help='Appr. Date this mission will start.',
+        default="2020-10-10",
+        required=True
     )
     
     end_date = fields.Date(
-        required=True,
         string='Ending Date',
-        help='Appr. Date this mission will end.'
+        help='Appr. Date this mission will end.',
+        default="2025-10-10",
+        required=True
     )
     
     duration_years = fields.Integer(
@@ -69,15 +71,6 @@ class Missions(models.Model):
         required=False,
         string='Spaceship',
         help='The assigned spaceship for this mission.',
-        default=None,
-        store=True
-    )
-    
-    sponsors = fields.Many2many(
-        'res.partner',
-        required=False,
-        string='Sponsors',
-        help='Mission commercial sponsors.',
         default=None,
         store=True
     )

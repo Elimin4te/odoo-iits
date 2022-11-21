@@ -20,7 +20,7 @@ class MissionShares(models.Model):
     )
     
     investors = fields.Many2many(
-        comodel_name = 'example.missions',
+        comodel_name = 'res.partner',
         string = 'Investors/Sponsors',
         help = 'Mission sponsors and investors.',
         ondelete = 'cascade',

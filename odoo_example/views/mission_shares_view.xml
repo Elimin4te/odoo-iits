@@ -15,7 +15,6 @@
 
                         <group string="Share Details">
                             <group>
-                                <field name="investors"/>
                                 <field name="qty"/>
                                 <field name="reserved_shares"/>
                                 <field name="total_reservation"/>
@@ -25,6 +24,11 @@
                                 <field name="tax"/>
                                 <field name="fprice"/>
                             </group>
+                            <notebook>
+                                <page string="Sponsors/Investors">
+                                    <field name="investors"/>
+                                </page>
+                            </notebook>
                         </group>
                         
                     </sheet>
@@ -59,11 +63,7 @@
             <field name="arch" type="xml">
                 
                     <search>
-                        <field name="mission_id"/>
-                        
-                        <searchpanel>
-                            <field name="investors"/>
-                        </searchpanel>    
+                        <field name="mission_id"/>    
                     </search>
     
             </field>
@@ -77,13 +77,26 @@
             <field name="arch" type="xml">
                 
                 <pivot string="Pivot View">
-                    <field name="investors" type="row"/>
+                    <field name="mission_id" type="row"/>
                     <field name="reserved_shares" type="measure"/>
                     <field name="bprice" type="column"/>
                     <field name="bprice" type="column"/>
                     <field name="tax" type="column"/>
                     <field name="qty" type="column"/>  
                 </pivot>
+                
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="shares_view_graph">
+            
+            <field name="name">mission.shares.graph</field>
+            <field name="model">mission.shares</field>
+            <field name="arch" type="xml">
+                
+                <graph string="Graph. View">
+                    <field name="mission_id"/>
+                </graph>
                 
             </field>
         </record>

@@ -29,9 +29,7 @@
                             <page string="Crewmates">
                                 <field name="mission_crewmates" force_save="1"/>
                             </page>
-                            <page string="Sponsors" force_save="1">
-                                <field name="sponsors"/>
-                            </page>
+
                         </notebook>
                         
                     </sheet>
