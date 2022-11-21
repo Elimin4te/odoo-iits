@@ -12,7 +12,7 @@ class Missions(models.Model):
     name = fields.Char(
         required=True,
         string='Name',
-        help='Mission Name.'
+        help='Mission Name'
     )
     
     description = fields.Text(
