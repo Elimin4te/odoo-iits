@@ -11,7 +11,8 @@
                 <form string="Missions Shares Form.">
                     
                     <sheet>
-                        <h1><field name="mission_id"/></h1>
+                        <h1><field name="share_symbol"/></h1>
+                        <field name="mission_id"/>
 
                         <group string="Share Details">
                             <group>

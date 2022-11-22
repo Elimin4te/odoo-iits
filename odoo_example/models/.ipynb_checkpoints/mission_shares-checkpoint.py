@@ -19,6 +19,13 @@ class MissionShares(models.Model):
         store=True
     )
     
+    share_symbol = fields.Char(
+        string = 'Share Symbol',
+        help = '3-4 Letter Share Symbol.',
+        required=True,
+        default='etc'
+    )
+    
     investors = fields.Many2many(
         comodel_name = 'res.partner',
         string = 'Investors/Sponsors',
@@ -75,6 +82,13 @@ class MissionShares(models.Model):
         for record in self:
             if record.reserved_shares >= 40:
                 raise ValidationError("Reserved shares can't be higher than 40%!")
+                
+    @api.constrains('share_symbol')
+    def _check_sn(self):
+        
+        for record in self:
+            if len(self.share_name) > 4:
+                raise ValidationError("Symbol name can only have max. 4 characters.")
                 
     @api.depends('bprice')
     def calc_pr(self):
