@@ -5,15 +5,17 @@ from odoo import models, api, fields
 class SaleOrder(models.Model):
     _inherit = ['sale.order']
     
-    mission_id = fields.Many2one(
-        comodel_name = 'example.missions',
+    share_id = fields.Many2one(
+        comodel_name = 'mission.shares',
         string = 'Related Mission',
         ondelete = 'cascade',
     )
     
-    crewmates_id = fields.One2many(
-        string='Crewmates',
-        related = 'mission_id.mission_crewmates',
+    qty = fields.Integer(
+        string="Buy QTY.",
+        help="Amount of shares to buy.",
+        required=True,
+        default=10
     )
     
     is_share = fields.Boolean(

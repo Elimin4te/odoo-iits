@@ -18,7 +18,8 @@
         'views/mission_views.xml',
         'views/mission_shares_view.xml',
         'views/mission_share_sale_inherit.xml',
-        'views/product_view_share_inherit.xml'
+        'views/product_view_share_inherit.xml',
+        'wizard/ss_wiz_view.xml'
     ],
     'demo': [
         'demo/example_demo.xml'

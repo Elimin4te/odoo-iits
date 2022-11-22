@@ -87,7 +87,7 @@ class MissionShares(models.Model):
     def _check_sn(self):
         
         for record in self:
-            if len(self.share_name) > 4:
+            if len(self.share_symbol) > 4:
                 raise ValidationError("Symbol name can only have max. 4 characters.")
                 
     @api.depends('bprice')

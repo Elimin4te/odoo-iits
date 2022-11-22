@@ -11,3 +11,4 @@ example_admin_shares,Shares Admin,model_mission_shares,group_missions_admin,1,1,
 example_read_all_shares,Read All,model_mission_shares,,1,0,0,0
 example_analist_shares,Shares Analist,model_mission_shares,group_missions_analist,1,1,0,0
 example_manager_shares,Shares Manager,model_mission_shares,group_missions_manager,1,1,1,0
+mission_shares_wizard,WIZ ADMTEST,model_mission_shares_wizard,,1,1,1,1

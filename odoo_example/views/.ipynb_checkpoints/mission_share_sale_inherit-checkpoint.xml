@@ -9,17 +9,7 @@
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='payment_term_id']" position="after">
                     <field name="is_share"/>
-                    <field name="mission_id" attrs="{'invisible':[('is_share','=',False)]}"/>
-                </xpath>
-                <xpath expr="//sheet//notebook" position="inside">
-                    <page string="Crewmates" attrs="{'invisible':[('is_share','=',False)]}">
-                        <field name="crewmates_id">
-                            <tree>
-                                <field name="full_name"/>
-                                <field name="role"/>
-                            </tree>
-                        </field>
-                    </page>
+                    <field name="share_id" attrs="{'invisible':[('is_share','=',False)]}"/>
                 </xpath>
             </field>
         </record>
