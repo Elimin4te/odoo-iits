@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <report id="mission_shares_report"
+                model="mission.shares"
+                string="Mission Shares Report"
+                name="odoo_example.shares_report_document"
+                file="odoo_example.shares_report_document"
+                report_type="qweb-html"/>
+
+        <template id="odoo_example.shares_report_document">
+
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout">
+                        <div class="page">
+                            <h2 t-field="o.share_symbol" class="mt16"/><small t-field="o.mission_id"/>
+                            <div class="row mt32 mb32" id="share_info">
+
+                                <div class="col-auto mt-100 mb-2">
+                                    <strong>Total Shares:</strong>
+                                    <span t-field="o.qty"/>
+                                </div>
+
+                                <div class="col-auto mt-100 mb-2">
+                                    <strong>Reserved Shares (%):</strong>
+                                    <span t-field="o.reserved_shares"/>
+                                </div>
+
+                                <div class="col-auto mt-100 mb-2">
+                                    <strong>Total Reservation:</strong>
+                                    <span t-field="o.total_reservation"/>
+                                </div>
+
+                                <div class="col-auto mt-100 mb-2">
+                                    <strong>Base Price:</strong>
+                                    <span t-field="o.bprice"/>
+                                </div>
+
+                                <div class="col-auto mt-100 mb-2">
+                                    <strong>Tax:</strong>
+                                    <span t-field="o.tax"/>
+                                </div>
+
+                                <div class="col-auto mt-100 mb-2">
+                                    <strong>Final Price:</strong>
+                                    <span t-field="o.fprice"/>
+                                </div>
+
+                            </div>
+                            <h3>Investors</h3>
+                            <table class="table table-sm o_main_table">
+                                <thead>
+                                    <tr>
+                                        <th name="th_company">Company:</th>
+                                        <th name="th_contact">Contact:</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="o.investors" t-as="x">
+                                        <tr>
+                                            <td name="td_company">
+                                                <span t-field="x.name"/>
+                                            </td>
+                                            <td name="td_contact">
+                                                <span t-field="x.email"/>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                        </div>
+                    </t>
+                </t>
+            </t>
+
+        </template>
+    </data>
+</odoo>
