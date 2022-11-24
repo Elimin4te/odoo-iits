@@ -66,6 +66,16 @@ class Missions(models.Model):
         store=True
     )
     
+    mission_share = fields.One2many(
+        required=False,
+        string='Share',
+        help='Mission Shares.',
+        default=None,
+        comodel_name='mission.shares',
+        inverse_name='mission_id',
+        store=True
+    )
+    
     assigned_spaceship = fields.Many2one(
         'res.partner',
         required=False,

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        
+        <template id="missions_website">
+            
+            <t t-call="website.layout">
+                <t t-set="title">Missions</t>
+                <div class="oe-structure">
+                    <div class="container">
+                        <h1>Missions</h1>
+                        <t t-foreach="missions" t-as="o">
+                            <h2>
+                                <t t-esc="o.name"/>
+                            </h2>
+                            <small>
+                                <t t-esc="o.id"/>
+                            </small>
+                            <p><strong>Description:</strong>
+                                <span t-field="o.description"/>
+                            </p>
+                            <p><strong>Goal:</strong>
+                                <span t-field="o.goal"/>
+                            </p>
+                            <p><strong>Duration:</strong>
+                                <span t-field="o.duration"/>
+                                (Starts <span t-field="o.start_date"/>)
+                            </p>
+                            <p><strong>Share Symbol:</strong>
+                                <t t-if="o.mission_share">
+                                    <a t-httf-ref="/SpaceMission/mission_shares/{{ slug(o.mission_share.share_symbol) }}">
+                                        <span t-field="o.mission_share.share_symbol"/>
+                                    </a>
+                                </t>
+                                <t t-if="not o.mission_share">
+                                    <p><h4><strong>No Shares for this mission at the moment!</strong></h4></p>
+                                </t>
+                            </p>
+                            <h3><strong>Crewmates:</strong></h3>
+                            <t t-if="o.mission_crewmates">
+                                <t t-foreach="o.mission_crewmates" t-as="x">
+                                    <div>
+                                        <li id="crewmate_obj">
+                                            <p><strong>Name:</strong>
+                                                <a t-httf-ref="/SpaceMission/Crewmates/{{ slug(x) }}">
+                                                    <span t-field="x.full_name"/>
+                                                    <small>(<span t-field="x.role"/>)</small>
+                                                </a>
+                                            </p>
+                                            <p><strong>Nationality:</strong>
+                                                <span t-field="x.full_name"/>
+                                            </p>
+                                            <p><strong>Birth Date:</strong>
+                                                <span t-field="x.birth_date"/>
+                                                <small>(<span t-field="x.age"/>)</small>
+                                            </p>
+                                        </li>
+                                    </div>
+                                </t>
+                            </t>
+                            <t t-if="not o.mission_crewmates">
+                                <p><h4><strong>No Crewmates in this mission at the moment!</strong></h4></p>
+                            </t>
+                        </t>
+                    </div>
+                </div>
+            </t>
+            
+        </template>
+        
+    </data>
+</odoo>

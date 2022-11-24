@@ -20,13 +20,15 @@
         'views/mission_share_sale_inherit.xml',
         'views/product_view_share_inherit.xml',
         'wizard/ss_wiz_view.xml',
-        'report/mission_share_re.xml'
+        'report/mission_share_re.xml',
+        'views/missions_website_template.xml'
     ],
     'demo': [
         'demo/example_demo.xml'
     ],
     'depends': [
         'base',
-        'sale_management'
+        'sale_management',
+        'website'
     ]
 }
